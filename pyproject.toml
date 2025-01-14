@@ -1,0 +1,21 @@
+[project]
+name = "myfinanceeasy"
+version = "0.1.0"
+description = "We are going to start a personal project to build a new software with the intetion to manage our money."
+authors = [
+    {name = "pachecosamuel",email = "pacheco.samuel@hotmail.com"}
+]
+readme = "README.md"
+requires-python = "^3.9"
+dependencies = [
+]
+
+[tool.poetry]
+packages = [
+    { include = "app", from = "src" }
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
