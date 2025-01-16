@@ -1,6 +1,6 @@
 # src/app/application/use_cases.py
 # from ..domain.models import User
-from app.domain.models import User
+from app.domain.user import User
 
 def create_user(user_id: int, name: str, email: str) -> User:
     """
