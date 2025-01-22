@@ -15,43 +15,33 @@
 <hr>
 
 <br><br><br>
-# Comandos Básicos do Alembic
 
 
-### Inicializa o Alembic no projeto, criando a estrutura básica de diretórios e arquivos.
-alembic init migrations
+# Gerenciamento de Scripts e Tarefas
 
-### Cria uma nova migração vazia para adicionar manualmente alterações no banco de dados.
-alembic revision -m "Descrição da migração"
 
-### Gera automaticamente uma migração com base nas diferenças entre os modelos e o banco de dados.
-alembic revision --autogenerate -m "Descrição da migração"
+### Lista os scripts definidos no arquivo pyproject.toml (na seção [tool.poetry.scripts]).
+poetry run list
 
-### Aplica todas as migrações pendentes ao banco de dados.
-alembic upgrade head
+### Executa um script definido no pyproject.toml.
+poetry run <script>
 
-### Aplica uma migração específica, substituindo <revision_id> pelo ID da migração.
-alembic upgrade <revision_id>
 
-### Reverte a última migração aplicada.
-alembic downgrade -1
 
-### Reverte para uma migração específica, substituindo <revision_id> pelo ID da migração.
-alembic downgrade <revision_id>
+# Gerenciamento do Projeto
 
-### Lista o histórico de migrações aplicadas ou disponíveis.
-alembic history
 
-### Exibe o ID da migração atualmente aplicada no banco de dados.
-alembic current
+# Exibe informações sobre o projeto atual (nome, versão, dependências, etc.).
+poetry about
 
-### Exibe as diferenças detectadas entre os modelos e o banco de dados.
-### Útil para revisar antes de criar uma migração.
-alembic heads
+# Verifica por atualizações disponíveis do Poetry.
+poetry self update
 
-<br><br>
+# Publica o pacote em um repositório (como o PyPI).
+poetry publish --build
 
-# Configurações Importantes
+
+### Configurações Importantes
 
 
 ### Se o arquivo de configuração 'alembic.ini' precisar ser editado para incluir a string de conexão ao banco:
