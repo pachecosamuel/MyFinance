@@ -1,0 +1,29 @@
+project_root/
+├── .gitignore
+├── LICENSE
+├── README.md
+├── poetry.lock
+├── alembic.init
+├── .env
+├── migrations
+├── pyproject.toml          # Gerenciado pelo Poetry
+├── src/                    # Todo o código-fonte do projeto
+│   ├── utils/ 
+│   ├── app/                # Módulo principal do aplicativo
+│   │   ├── __init__.py
+│   │   ├── domain/         # Entidades da aplicação
+│   │   │   ├── __init__.py
+│   │   │   └── budget.py   # Modelos de domínio
+│   │   │   └── user.py   # Modelos de domínio
+│   │   ├── application/    # Casos de uso e regras de negócio
+│   │   │   ├── __init__.py
+│   │   │   └── use_cases.py
+│   │   ├── infrastructure/ # Conexão com recursos externos (DB, APIs)
+│   │   │   ├── __init__.py
+│   │   │   └── orm.py      # Configuração do ORM
+│   │   ├── interfaces/     # Interfaces (ex.: REST APIs, CLI)
+│   │   │   ├── __init__.py
+│   │   │   └── api.py
+│   ├── tests/              # Testes unitários e de integração
+│       ├── __init__.py
+│       └── test_sample.py

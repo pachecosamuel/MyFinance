@@ -1,4 +1,4 @@
-# src/app/domain/models.py
+# src/app/domain/user.py
 
 class User:
     def __init__(self, user_id: int, name: str, email: str):
