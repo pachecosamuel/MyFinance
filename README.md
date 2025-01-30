@@ -1,3 +1,9 @@
+# Inicialização do servidor fastapi
+
+### uvicorn src.main:app --reload
+
+<br><br><br>
+
 # Explicação da arquitetura
 
 #### src/domain: Contém as entidades e os casos de uso, representando o core do seu negócio.
